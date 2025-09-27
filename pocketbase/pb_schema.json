@@ -9,8 +9,8 @@ Data validations failed for collection "membership_types" (membership_types):
     }
   }
 }.
-Detected changes
-Changed
+    "id": "membership_types_collection",
+    "name": "membership_types",
 users
 (_pb_users_auth_)
 Added
