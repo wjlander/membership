@@ -1,0 +1,40 @@
+[Unit]
+Description=PocketBase HTTPS Server
+Documentation=https://pocketbase.io/docs/
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=pocketbase
+Group=pocketbase
+ExecStart=/opt/pocketbase/pocketbase serve p.ringing.org.uk \
+    --dir=/var/lib/pocketbase/pb_data \
+    --publicDir=/var/lib/pocketbase/pb_public \
+    --hooksDir=/var/lib/pocketbase/pb_hooks \
+    --migrationsDir=/var/lib/pocketbase/pb_migrations \
+    --http=0.0.0.0:8080 \
+    --https=0.0.0.0:8443 \
+    --origins="*"
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/pocketbase
+
+# Restart policy
+Restart=always
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pocketbase
+
+[Install]
+WantedBy=multi-user.target
