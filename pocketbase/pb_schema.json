@@ -149,7 +149,7 @@
         "presentable": false,
         "unique": false,
         "options": {
-          "collectionId": "organizations",
+          "collectionId": "orgs_collection",
           "cascadeDelete": false,
           "minSelect": null,
           "maxSelect": 1,
