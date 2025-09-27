@@ -6,7 +6,7 @@
     "system": false,
     "schema": [
       {
-        "id": "name",
+        "id": "name_field",
         "name": "name",
         "type": "text",
         "system": false,
@@ -20,7 +20,7 @@
         }
       },
       {
-        "id": "subdomain",
+        "id": "subdomain_field",
         "name": "subdomain",
         "type": "text",
         "system": false,
@@ -34,7 +34,7 @@
         }
       },
       {
-        "id": "status",
+        "id": "status_field",
         "name": "status",
         "type": "select",
         "system": false,
@@ -51,7 +51,7 @@
         }
       },
       {
-        "id": "logo",
+        "id": "logo_field",
         "name": "logo",
         "type": "file",
         "system": false,
@@ -73,7 +73,7 @@
         }
       },
       {
-        "id": "settings",
+        "id": "settings_field",
         "name": "settings",
         "type": "json",
         "system": false,
@@ -85,7 +85,7 @@
         }
       },
       {
-        "id": "primary_color",
+        "id": "primary_color_field",
         "name": "primary_color",
         "type": "text",
         "system": false,
@@ -99,7 +99,7 @@
         }
       },
       {
-        "id": "contact_email",
+        "id": "contact_email_field",
         "name": "contact_email",
         "type": "email",
         "system": false,
@@ -127,7 +127,7 @@
     "system": false,
     "schema": [
       {
-        "id": "name",
+        "id": "name_field",
         "name": "name",
         "type": "text",
         "system": false,
@@ -141,7 +141,7 @@
         }
       },
       {
-        "id": "tenant_id",
+        "id": "tenant_id_field",
         "name": "tenant_id",
         "type": "relation",
         "system": false,
@@ -157,7 +157,7 @@
         }
       },
       {
-        "id": "role",
+        "id": "role_field",
         "name": "role",
         "type": "select",
         "system": false,
@@ -174,7 +174,7 @@
         }
       },
       {
-        "id": "status",
+        "id": "status_field",
         "name": "status",
         "type": "select",
         "system": false,
@@ -192,7 +192,7 @@
         }
       },
       {
-        "id": "phone",
+        "id": "phone_field",
         "name": "phone",
         "type": "text",
         "system": false,
@@ -206,7 +206,7 @@
         }
       },
       {
-        "id": "address",
+        "id": "address_field",
         "name": "address",
         "type": "json",
         "system": false,
@@ -218,7 +218,7 @@
         }
       },
       {
-        "id": "preferences",
+        "id": "preferences_field",
         "name": "preferences",
         "type": "json",
         "system": false,
@@ -230,7 +230,7 @@
         }
       },
       {
-        "id": "avatar",
+        "id": "avatar_field",
         "name": "avatar",
         "type": "file",
         "system": false,
@@ -278,7 +278,7 @@
     "system": false,
     "schema": [
       {
-        "id": "tenant_id",
+        "id": "tenant_id_field",
         "name": "tenant_id",
         "type": "relation",
         "system": false,
@@ -294,7 +294,7 @@
         }
       },
       {
-        "id": "name",
+        "id": "name_field",
         "name": "name",
         "type": "text",
         "system": false,
@@ -308,7 +308,7 @@
         }
       },
       {
-        "id": "description",
+        "id": "description_field",
         "name": "description",
         "type": "text",
         "system": false,
@@ -322,7 +322,7 @@
         }
       },
       {
-        "id": "price",
+        "id": "price_field",
         "name": "price",
         "type": "number",
         "system": false,
@@ -336,7 +336,7 @@
         }
       },
       {
-        "id": "duration_months",
+        "id": "duration_months_field",
         "name": "duration_months",
         "type": "number",
         "system": false,
@@ -350,7 +350,7 @@
         }
       },
       {
-        "id": "benefits",
+        "id": "benefits_field",
         "name": "benefits",
         "type": "json",
         "system": false,
@@ -362,7 +362,7 @@
         }
       },
       {
-        "id": "active",
+        "id": "active_field",
         "name": "active",
         "type": "bool",
         "system": false,
@@ -387,7 +387,7 @@
     "system": false,
     "schema": [
       {
-        "id": "tenant_id",
+        "id": "tenant_id_field",
         "name": "tenant_id",
         "type": "relation",
         "system": false,
@@ -403,7 +403,7 @@
         }
       },
       {
-        "id": "user_id",
+        "id": "user_id_field",
         "name": "user_id",
         "type": "relation",
         "system": false,
@@ -419,7 +419,7 @@
         }
       },
       {
-        "id": "membership_type_id",
+        "id": "membership_type_id_field",
         "name": "membership_type_id",
         "type": "relation",
         "system": false,
@@ -435,7 +435,7 @@
         }
       },
       {
-        "id": "status",
+        "id": "status_field",
         "name": "status",
         "type": "select",
         "system": false,
@@ -453,7 +453,7 @@
         }
       },
       {
-        "id": "start_date",
+        "id": "start_date_field",
         "name": "start_date",
         "type": "date",
         "system": false,
@@ -466,7 +466,7 @@
         }
       },
       {
-        "id": "end_date",
+        "id": "end_date_field",
         "name": "end_date",
         "type": "date",
         "system": false,
@@ -479,7 +479,7 @@
         }
       },
       {
-        "id": "auto_renew",
+        "id": "auto_renew_field",
         "name": "auto_renew",
         "type": "bool",
         "system": false,
@@ -489,7 +489,7 @@
         "options": {}
       },
       {
-        "id": "payment_reference",
+        "id": "payment_reference_field",
         "name": "payment_reference",
         "type": "text",
         "system": false,
@@ -520,7 +520,7 @@
     "system": false,
     "schema": [
       {
-        "id": "tenant_id",
+        "id": "tenant_id_field",
         "name": "tenant_id",
         "type": "relation",
         "system": false,
@@ -536,7 +536,7 @@
         }
       },
       {
-        "id": "name",
+        "id": "name_field",
         "name": "name",
         "type": "text",
         "system": false,
@@ -550,7 +550,7 @@
         }
       },
       {
-        "id": "description",
+        "id": "description_field",
         "name": "description",
         "type": "text",
         "system": false,
@@ -564,7 +564,7 @@
         }
       },
       {
-        "id": "type",
+        "id": "type_field",
         "name": "type",
         "type": "select",
         "system": false,
@@ -580,7 +580,7 @@
         }
       },
       {
-        "id": "active",
+        "id": "active_field",
         "name": "active",
         "type": "bool",
         "system": false,
@@ -605,7 +605,7 @@
     "system": false,
     "schema": [
       {
-        "id": "tenant_id",
+        "id": "tenant_id_field",
         "name": "tenant_id",
         "type": "relation",
         "system": false,
@@ -621,7 +621,7 @@
         }
       },
       {
-        "id": "user_id",
+        "id": "user_id_field",
         "name": "user_id",
         "type": "relation",
         "system": false,
@@ -637,7 +637,7 @@
         }
       },
       {
-        "id": "list_id",
+        "id": "list_id_field",
         "name": "list_id",
         "type": "relation",
         "system": false,
@@ -653,7 +653,7 @@
         }
       },
       {
-        "id": "subscribed",
+        "id": "subscribed_field",
         "name": "subscribed",
         "type": "bool",
         "system": false,
