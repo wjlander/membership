@@ -1,6 +1,6 @@
 [
   {
-    "id": "organizations",
+    "id": "orgs_collection",
     "name": "organizations",
     "type": "base",
     "system": false,
