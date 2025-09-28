@@ -4,7 +4,7 @@ const https = require('https');
 const http = require('http');
 
 // Configuration
-const POCKETBASE_URL = 'http://p.ringing.org.uk';
+const POCKETBASE_URL = 'https://p.ringing.org.uk';
 const ADMIN_EMAIL = process.argv[2];
 const ADMIN_PASSWORD = process.argv[3];
 
