@@ -5,12 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Users, UserCheck, UserX, TriangleAlert as AlertTriangle, Plus, Search, ListFilter as Filter } from 'lucide-react';
+import { Users, UserCheck, UserX, AlertTriangle, Plus, Search, Filter } from 'lucide-react';
 import { getDashboardStats, getUsers, updateUserStatus, getMemberships, createMembership, getMembershipTypes } from '@/lib/pocketbase';
-import { User, DashboardStats, MembershipType } from '@/lib/types';
+import type { User, DashboardStats, MembershipType } from '@/lib/types';
 import { format } from 'date-fns';
 
 export default function AdminDashboard() {

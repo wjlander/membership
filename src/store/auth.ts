@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { pb, User, Organization, AuthService, TenantService } from '@/lib/pocketbase';
+import { pb, AuthService, TenantService } from '@/lib/pocketbase';
+import type { User, Organization } from '@/lib/types';
 
 interface AuthState {
   user: User | null;

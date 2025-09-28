@@ -1,47 +1,5 @@
 import PocketBase from 'pocketbase';
-import { Organization, User, MembershipType, Membership, MailingList, ListSubscription } from './types';
-
-// Types for our collections
-export interface Organization {
-  id: string;
-  name: string;
-  subdomain: string;
-  logo?: string;
-  settings?: Record<string, any>;
-  status: 'active' | 'inactive' | 'suspended';
-  created: string;
-  updated: string;
-}
-
-export interface User {
-  id: string;
-  tenant_id: string;
-  email: string;
-  name: string;
-  role: 'member' | 'admin' | 'super_admin';
-  status: 'active' | 'inactive' | 'suspended' | 'pending';
-  phone?: string;
-  address?: Record<string, any>;
-  preferences?: Record<string, any>;
-  created: string;
-  updated: string;
-  expand?: {
-    tenant_id?: Organization;
-  };
-}
-
-export interface MembershipType {
-  id: string;
-  tenant_id: string;
-  name: string;
-  description?: string;
-  price: number;
-  duration_months: number;
-  benefits?: string[];
-  active: boolean;
-  created: string;
-  updated: string;
-}
+import type { Organization, User, MembershipType, Membership, MailingList, ListSubscription } from './types';
 
 // PocketBase client singleton
 class PocketBaseClient {

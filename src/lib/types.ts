@@ -4,6 +4,7 @@ export interface Organization {
   subdomain: string;
   logo?: string;
   settings?: Record<string, any>;
+  status: 'active' | 'inactive' | 'suspended';
   primary_color?: string;
   contact_email?: string;
   created: string;
@@ -93,6 +94,6 @@ export interface DashboardStats {
   totalMembers: number;
   activeMembers: number;
   pendingMembers: number;
-  totalRevenue: number;
+  totalMemberships: number;
   expiringMemberships: number;
 }
