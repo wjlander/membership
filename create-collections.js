@@ -22,6 +22,9 @@ function makeRequest(options, data = null) {
       let body = '';
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
+        console.log(`Response status: ${res.statusCode}`);
+        console.log(`Response body: ${body.substring(0, 200)}...`);
+        
         try {
           const result = body ? JSON.parse(body) : {};
           if (res.statusCode >= 200 && res.statusCode < 300) {
@@ -30,7 +33,7 @@ function makeRequest(options, data = null) {
             reject(new Error(`HTTP ${res.statusCode}: ${result.message || body}`));
           }
         } catch (e) {
-          reject(new Error(`Parse error: ${e.message}`));
+          reject(new Error(`Parse error: ${e.message}. Response was: ${body.substring(0, 100)}`));
         }
       });
     });
@@ -60,6 +63,21 @@ let authToken = '';
 
 async function authenticate() {
   console.log('🔐 Authenticating admin...');
+  
+  // First, let's test if the API is accessible
+  console.log('Testing API accessibility...');
+  const testOptions = {
+    ...baseOptions,
+    path: '/api/health',
+    method: 'GET'
+  };
+  
+  try {
+    await makeRequest(testOptions);
+    console.log('✅ API is accessible');
+  } catch (error) {
+    console.log('⚠️  Health check failed, trying authentication anyway...');
+  }
   
   const options = {
     ...baseOptions,
