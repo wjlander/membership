@@ -13,7 +13,12 @@ import {
 } from 'lucide-react';
 
 export function MemberDashboard() {
-  const { user, oimport { User, CreditCard, Mail, Calendar, Download, Settings, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle } from 'lucide-react'onal information',
+  const { user, organization } = useAuthStore();
+
+  const quickActions = [
+    {
+      title: 'Update Profile',
+      description: 'Manage your personal information',
       icon: User,
       action: () => console.log('Update profile'),
     },
