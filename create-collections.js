@@ -79,26 +79,38 @@ async function authenticate() {
     console.log('⚠️  Health check failed, trying authentication anyway...');
   }
   
-  const options = {
-    ...baseOptions,
-    path: '/api/admins/auth-with-password',
-    method: 'POST'
-  };
+  // Try different authentication endpoints
+  const authEndpoints = [
+    '/api/admins/auth-with-password',
+    '/api/collections/users/auth-with-password',
+    '/api/auth-with-password',
+    '/api/admin/auth-with-password'
+  ];
 
   const authData = {
     identity: ADMIN_EMAIL,
     password: ADMIN_PASSWORD
   };
 
-  try {
-    const result = await makeRequest(options, authData);
-    authToken = result.token;
-    console.log('✅ Authentication successful');
-    return result;
-  } catch (error) {
-    console.error('❌ Authentication failed:', error.message);
-    throw error;
+  for (const endpoint of authEndpoints) {
+    console.log(`Trying endpoint: ${endpoint}`);
+    const options = {
+      ...baseOptions,
+      path: endpoint,
+      method: 'POST'
+    };
+
+    try {
+      const result = await makeRequest(options, authData);
+      authToken = result.token;
+      console.log(`✅ Authentication successful with endpoint: ${endpoint}`);
+      return result;
+    } catch (error) {
+      console.log(`❌ Failed with ${endpoint}: ${error.message}`);
+    }
   }
+  
+  throw new Error('All authentication endpoints failed');
 }
 
 async function createCollection(collectionData) {
