@@ -45,6 +45,7 @@ export class TenantService {
       }
       
       // Try to get default organization for development
+      // Try to get default organization for development
       try {
         const records = await pb.collection('organizations').getList(1, 1, {
           filter: 'status = "active"'
